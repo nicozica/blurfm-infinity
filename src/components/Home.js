@@ -5,7 +5,7 @@ const Home = () => {
    return (
       <div>
          <h1>Bienvenido a la Radio Online de Calidad de primeras!</h1>
-         <p>Disfruta de nuestra programación en vivo y en directo.</p>
+         <p>Disfruta de nuestra programación en vivo.</p>
 
          <Link to="/about">Acerca de</Link>
             <br />
