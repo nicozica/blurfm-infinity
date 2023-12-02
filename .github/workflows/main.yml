@@ -16,7 +16,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '16'  # Update this line to use Node.js 16
 
     - name: Install Dependencies
       run: npm install
@@ -30,9 +30,20 @@ jobs:
     needs: build
 
     steps:
+    - name: Debug Information
+      run: |
+        echo "Debug info: ${GITHUB_SHA}"
+        echo "Server: ${{ secrets.SERVER }}"
+        echo "Local Path: ./build"
+        ls -l ./build   # Print the contents of the build directory for verification
+
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2
       with:
-        server: ${{ secrets.SERVER }}
-        remote_path: /var/www/infinity
-        local_path: ./build
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Adjust the input names
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+        SOURCE: ./build
+        TARGET: /var/www/infinity
+        ARGS: '--verbose'  # Add any additional arguments if needed
