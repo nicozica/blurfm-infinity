@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
    return (
       <div>
-         <h1>Bienvenido a la Radio Online</h1>
+         <h1>Bienvenido a la Radio Online de Calidad de primera</h1>
          <p>Disfruta de nuestra programación en vivo.</p>
 
          <Link to="/about">Acerca de</Link>
