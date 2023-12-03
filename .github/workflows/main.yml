@@ -47,3 +47,4 @@ jobs:
         SOURCE: ./build
         TARGET: /var/www/infinity
         ARGS: '--verbose'  # Add any additional arguments if needed
+Caba78!
