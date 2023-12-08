@@ -5,7 +5,7 @@ const Player = () => {
    return (
      <div className="player-container">
        <ReactPlayer
-         url="http://radio.dyne.org:8000/blurfm02"
+         url="https://live.radiovague.com:8443/blurfm04"
          playing={true}
          controls={true}
          width="100%"
