@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&family=Readex+Pro&display=swap');
 
-$font-family-sans-serif: "Inter", sans-serif !important;
+$font-family-headings: 'Prompt', sans-serif;
+$font-family-body: 'Readex Pro', sans-serif;
 
 body {
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-body;
 }
